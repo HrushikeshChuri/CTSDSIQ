@@ -82,9 +82,10 @@ def geneateChildWithCrossoverMutation(parent1,parent2):
 
 	return child
 
-def main():
-
-	population = generatePopulation(1000)
+def main(max_iteration,mutation_rate,population):
+	MUTATION_RATE = mutation_rate
+	MAX_ITERATION = max_iteration
+	population = generatePopulation(population)
 	"""
 	for p in population:
     	print('sequence: ',p.sequence, 'fitness:',p.fitness, 'probability:',p.probability)
@@ -117,4 +118,4 @@ def main():
 		generation+=1
 		max_iteration-=1
 
-main()
+main(10000,0.000001,1000)
